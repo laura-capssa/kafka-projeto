@@ -1,4 +1,4 @@
-# Projeto Kafka - Laura Capssa e Vinívius Mattos
+# Projeto Kafka - Laura Capssa e Vinícius Mattos
 
 ## Passos para Instalação
 
@@ -130,4 +130,19 @@ Testes de Falha de Nodo: Foi realizado o teste de falha de um broker Kafka, derr
 http://localhost:9000
 ```
 Para visualizar os tópicos do Kafka.
+
+
+# Passo 6: Prints
+![Captura de tela 2024-12-06 194536](https://github.com/user-attachments/assets/81c57ce8-719c-41cf-894b-a555bf6f0e3c)
+
+![Captura de tela 2024-12-06 195356](https://github.com/user-attachments/assets/8457bd01-bc77-49d2-9992-22c9c9652280)
+
+![Captura de tela 2024-12-06 195423](https://github.com/user-attachments/assets/28183071-35e3-4254-8bee-3f3d313b42e0)
+
+![Captura de tela 2024-12-06 200322](https://github.com/user-attachments/assets/93825414-0467-4748-9685-c6eab1b01967)
+
+![Captura de tela 2024-12-06 202319](https://github.com/user-attachments/assets/7a9af42b-948f-4eff-9415-e2f0f2b10b18)
+
+![Captura de tela 2024-12-06 204805](https://github.com/user-attachments/assets/cf328f4d-e656-47e3-ad6b-94f1a593c49c)
+
 
