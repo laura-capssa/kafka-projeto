@@ -15,7 +15,7 @@ Antes de começar, você precisará ter os seguintes programas instalados:
 Primeiro, clone o repositório para sua máquina local:
 
 ```bash
-git clone https://github.com/usuario/kafka-projeto.git
+git clone https://github.com/laura-capssa/kafka-projeto
 cd kafka-projeto
 ```
 
