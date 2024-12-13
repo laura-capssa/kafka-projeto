@@ -114,7 +114,7 @@ kafka-console-consumer.sh --bootstrap-server kafka1:9092 --topic test-topic --gr
 ```
 Repita o comando em outro container Kafka. As mensagens enviadas pelo produtor serão consumidas pelos dois consumidores, balanceadas entre eles.
 
-###Comando para listar o líder de um tópico
+### Comando para listar o líder de um tópico
 
 ```bash
 kafka-topics --bootstrap-server kafka1:9092 --describe --topic nome-do-topico | grep "Leader"
