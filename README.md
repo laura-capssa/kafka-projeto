@@ -114,6 +114,12 @@ kafka-console-consumer.sh --bootstrap-server kafka1:9092 --topic test-topic --gr
 ```
 Repita o comando em outro container Kafka. As mensagens enviadas pelo produtor serão consumidas pelos dois consumidores, balanceadas entre eles.
 
+Comando para listar o líder de um tópico
+
+```bash
+kafka-topics --bootstrap-server kafka1:9092 --describe --topic nome-do-topico | grep "Leader"
+```
+
 # Novidades em Relação ao Exemplo de Aula
 Configuração de múltiplos brokers Kafka: No exemplo de aula, foi utilizado apenas um broker Kafka. Este projeto utiliza 4 brokers Kafka, distribuídos para fornecer maior resiliência e capacidade de escalabilidade.
 
