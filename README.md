@@ -46,7 +46,7 @@ O arquivo docker-compose.yml já está configurado para 4 nós Kafka (kafka1, ka
 As configurações de fator de replicação e partições são definidas automaticamente, mas podem ser alteradas nas configurações de criação de tópico no Kafka.
 Para criar um tópico com 3 partições e fator de replicação 3, execute o seguinte comando em um dos containers Kafka:
 ```bash
-docker exec -it kafka-projeto_kafka1_1 /bin/bash
+docker exec -it kafka-projeto-kafka1-1 /bin/bash
 kafka-topics.sh --create --topic test-topic --partitions 3 --replication-factor 3 --bootstrap-server kafka1:9092
 ```
 
@@ -56,13 +56,13 @@ Para testar o produtor e consumidor com todos os nós em funcionamento, siga os 
 **Produtor:**
 Em um dos containers Kafka, execute o produtor:
 ```bash
-docker exec -it kafka-projeto_kafka1_1 /bin/bash
+docker exec -it kafka-projeto-kafka1-1 /bin/bash
 kafka-console-producer.sh --broker-list kafka1:9092,kafka2:9093,kafka3:9094,kafka4:9095 --topic test-topic
 ```
 **Consumidor:**
 Em outro container Kafka, execute o consumidor:
 ```bash
-docker exec -it kafka-projeto_kafka2_1 /bin/bash
+docker exec -it kafka-projeto-kafka2-1 /bin/bash
 kafka-console-consumer.sh --bootstrap-server kafka1:9092 --topic test-topic --from-beginning
 ```
 
@@ -72,7 +72,7 @@ Para testar a resiliência do sistema, derrube um dos nós Kafka e verifique se 
 ## 1. Derrubar um Nodo Kafka
 Desligue um dos containers Kafka:
 ```bash
-docker stop kafka-projeto_kafka1_1
+docker stop kafka-projeto-kafka1-1
 ```
 ## 2. Testar Produtor e Consumidor
 Tente enviar e consumir mensagens novamente, como feito anteriormente. O Kafka deve continuar funcionando com o fator de replicação garantindo a disponibilidade.
@@ -109,7 +109,7 @@ O Kafka suporta consumidores em grupos, o que permite que as mensagens sejam con
 
 Para testar isso, você pode criar múltiplos consumidores em diferentes containers Kafka:
 ```bash
-docker exec -it kafka-projeto_kafka2_1 /bin/bash
+docker exec -it kafka-projeto-kafka2-1 /bin/bash
 kafka-console-consumer.sh --bootstrap-server kafka1:9092 --topic test-topic --group test-group
 ```
 Repita o comando em outro container Kafka. As mensagens enviadas pelo produtor serão consumidas pelos dois consumidores, balanceadas entre eles.
